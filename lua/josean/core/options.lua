@@ -41,3 +41,7 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- turn off swapfile
 opt.swapfile = false
+
+vim.o.foldmethod = "indent" -- Use indentation for folding
+vim.o.foldlevel = 99        -- Start with all folds open
+vim.o.foldenable = true     -- Enable folding by default

@@ -1,6 +1,6 @@
 return {
   "norcalli/nvim-colorizer.lua",
-  event = "BufReadPre",
+  -- event = "BufReadPre",
   config = function()
     local colorizer = require("colorizer")
     colorizer.setup({
@@ -14,7 +14,7 @@ return {
         hsl_fn = true, -- CSS hsl() and hsla() functions
         css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
         css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
-        mode = "background", -- Set the display mode
+        mode = "foreground", -- Set the display mode
       },
     })
   end,

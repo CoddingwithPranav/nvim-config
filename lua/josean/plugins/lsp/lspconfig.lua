@@ -161,6 +161,20 @@ return {
 					capabilities = capabilities,
 				})
 			end,
+			["tailwindcss"] = function()
+				lspconfig["tailwindcss"].setup({
+					capabilities = capabilities,
+					settings = {
+						tailwindCSS = {
+							experimental = {
+								classRegex = {
+									{ "clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)" },
+								},
+							},
+						},
+					},
+				})
+			end,
 		})
 	end,
 }
